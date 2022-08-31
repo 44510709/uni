@@ -1,0 +1,49 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	    ,{
+            "path" : "pages/list/list",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"subPackages": [ //分包
+		{
+			"root":"subpages",
+			"pages": [
+				
+			{
+                    "path" : "fenbao/fenbao",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "分包",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"easycom": {
+	  "autoscan": true,
+	  "custom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue" //按需加载
+		// "(.*)": "@/components/$1.vue" // 匹配components目录内的vue文件
+	  }
+	}
+}
