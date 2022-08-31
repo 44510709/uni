@@ -8642,9 +8642,9 @@ function resolveLocaleChain(locale) {
 
 /***/ }),
 /* 5 */
-/*!***********************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/pages.json ***!
-  \***********************************************/
+/*!***************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/pages.json ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8785,9 +8785,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 12 */
-/*!***************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/store/index.js ***!
-  \***************************************************/
+/*!*******************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/store/index.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8799,21 +8799,21 @@ _vue.default.use(_vuex.default);
 var store = new _vuex.default.Store({
   state: {
     // userName:'未登录用户'
-    userName: uni.getStorageSync('userName') ? uni.getStorageSync('userName') : '未登录用户' },
+    userInfo: uni.getStorageSync('userInfo') ? JSON.parse(uni.getStorageSync('userInfo')) : { userName: '未登录用户' } },
 
   mutations: {
-    MLOGIN: function MLOGIN(state, userName) {
-      uni.setStorageSync('userName', userName);
-      state.userName = userName;
+    MLOGIN: function MLOGIN(state, userInfo) {
+      uni.setStorageSync('userInfo', JSON.stringify(userInfo));
+      state.userInfo = userInfo;
     },
     MLOGOUT: function MLOGOUT(state) {
-      uni.clearStorageSync('userName');
-      state.userName = '退出状态';
+      uni.clearStorageSync('userInfo');
+      state.userInfo = { "userName": "未登录用户" };
     } },
 
   actions: {
-    login: function login(context, userName) {
-      context.commit('MLOGIN', userName);
+    login: function login(context, userInfo) {
+      context.commit('MLOGIN', userInfo);
     },
     logout: function logout(context) {
       context.commit('MLOGOUT');
@@ -10083,9 +10083,9 @@ module.exports = index_cjs;
 
 /***/ }),
 /* 14 */
-/*!*******************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/index.js ***!
-  \*******************************************************************/
+/*!***********************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/index.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10172,9 +10172,9 @@ var install = function install(Vue) {
 
 /***/ }),
 /* 15 */
-/*!******************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/mixin/mixin.js ***!
-  \******************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/mixin/mixin.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10341,9 +10341,9 @@ var install = function install(Vue) {
 
 /***/ }),
 /* 16 */
-/*!********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/mixin/mpMixin.js ***!
-  \********************************************************************************/
+/*!************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/mixin/mpMixin.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10356,9 +10356,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 17 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/index.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/index.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10369,9 +10369,9 @@ _Request.default;exports.default = _default;
 
 /***/ }),
 /* 18 */
-/*!********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/core/Request.js ***!
-  \********************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/core/Request.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10577,9 +10577,9 @@ Request = /*#__PURE__*/function () {
 
 /***/ }),
 /* 19 */
-/*!****************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
-  \****************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10590,9 +10590,9 @@ function _default(config) {return (0, _index.default)(config);};exports.default 
 
 /***/ }),
 /* 20 */
-/*!**********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/adapters/index.js ***!
-  \**********************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/adapters/index.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10698,9 +10698,9 @@ function _default(config) {return new Promise(function (resolve, reject) {
 
 /***/ }),
 /* 21 */
-/*!************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
-  \************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10777,9 +10777,9 @@ function buildURL(url, params) {
 
 /***/ }),
 /* 22 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/utils.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/utils.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10918,9 +10918,9 @@ function isUndefined(val) {
 
 /***/ }),
 /* 23 */
-/*!**************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
-  \**************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10948,9 +10948,9 @@ function buildFullPath(baseURL, requestedURL) {
 
 /***/ }),
 /* 24 */
-/*!*****************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
-  \*****************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10972,9 +10972,9 @@ function isAbsoluteURL(url) {
 
 /***/ }),
 /* 25 */
-/*!***************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
-  \***************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10996,9 +10996,9 @@ function combineURLs(baseURL, relativeURL) {
 
 /***/ }),
 /* 26 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/core/settle.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/core/settle.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11022,9 +11022,9 @@ function settle(resolve, reject, response) {var
 
 /***/ }),
 /* 27 */
-/*!*******************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
-  \*******************************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11082,9 +11082,9 @@ InterceptorManager;exports.default = _default;
 
 /***/ }),
 /* 28 */
-/*!************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
-  \************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11195,9 +11195,9 @@ function _default(globalsConfig) {var config2 = arguments.length > 1 && argument
 
 /***/ }),
 /* 29 */
-/*!*********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/core/defaults.js ***!
-  \*********************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/core/defaults.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11233,9 +11233,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 30 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/luch-request/utils/clone.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/luch-request/utils/clone.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11504,7 +11504,7 @@ var clone = function () {
 }();var _default =
 
 clone;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 31).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 31).Buffer))
 
 /***/ }),
 /* 31 */
@@ -13581,9 +13581,9 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 /* 35 */
-/*!*****************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/util/route.js ***!
-  \*****************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/util/route.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14504,9 +14504,9 @@ if (hadRuntime) {
 
 /***/ }),
 /* 39 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/function/colorGradient.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/function/colorGradient.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14647,9 +14647,9 @@ function colorToRgba(color, alpha) {
 
 /***/ }),
 /* 40 */
-/*!********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/function/test.js ***!
-  \********************************************************************************/
+/*!************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/function/test.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14944,9 +14944,9 @@ function regExp(o) {
 
 /***/ }),
 /* 41 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/function/debounce.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/function/debounce.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14983,9 +14983,9 @@ debounce;exports.default = _default;
 
 /***/ }),
 /* 42 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/function/throttle.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/function/throttle.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15023,9 +15023,9 @@ throttle;exports.default = _default;
 
 /***/ }),
 /* 43 */
-/*!*********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/function/index.js ***!
-  \*********************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/function/index.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15738,9 +15738,9 @@ function setConfig(_ref3)
 
 /***/ }),
 /* 44 */
-/*!*********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/function/digit.js ***!
-  \*********************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/function/digit.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15913,9 +15913,9 @@ function enableBoundaryChecking() {var flag = arguments.length > 0 && arguments[
 
 /***/ }),
 /* 45 */
-/*!********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/config.js ***!
-  \********************************************************************************/
+/*!************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/config.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15956,9 +15956,9 @@ if (true) {
 
 /***/ }),
 /* 46 */
-/*!*******************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props.js ***!
-  \*******************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16155,9 +16155,9 @@ _upload.default);exports.default = _default;
 
 /***/ }),
 /* 47 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/actionSheet.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/actionSheet.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16188,9 +16188,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 48 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/album.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/album.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16221,9 +16221,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 49 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/alert.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/alert.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16251,9 +16251,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 50 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/avatar.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/avatar.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16287,9 +16287,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 51 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/avatarGroup.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/avatarGroup.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16318,9 +16318,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 52 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/backtop.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/backtop.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16352,9 +16352,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 53 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/badge.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/badge.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16387,9 +16387,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 54 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/button.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/button.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16437,9 +16437,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 55 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/calendar.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/calendar.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16487,9 +16487,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 56 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/carKeyboard.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/carKeyboard.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16510,9 +16510,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 57 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/cell.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/cell.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16553,9 +16553,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 58 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/cellGroup.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/cellGroup.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16578,9 +16578,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 59 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/checkbox.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/checkbox.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16613,9 +16613,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 60 */
-/*!*********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
-  \*********************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16650,9 +16650,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 61 */
-/*!**********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/circleProgress.js ***!
-  \**********************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/circleProgress.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16673,9 +16673,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 62 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/code.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/code.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16702,9 +16702,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 63 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/codeInput.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/codeInput.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16738,9 +16738,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 64 */
-/*!***********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/col.js ***!
-  \***********************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/col.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16765,9 +16765,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 65 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/collapse.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/collapse.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16790,9 +16790,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 66 */
-/*!********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/collapseItem.js ***!
-  \********************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/collapseItem.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16823,9 +16823,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 67 */
-/*!********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/columnNotice.js ***!
-  \********************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/columnNotice.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16855,9 +16855,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 68 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/countDown.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/countDown.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16881,9 +16881,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 69 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/countTo.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/countTo.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16914,9 +16914,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 70 */
-/*!**********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/datetimePicker.js ***!
-  \**********************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/datetimePicker.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16958,9 +16958,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 71 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/divider.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/divider.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16988,9 +16988,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 72 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/empty.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/empty.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17021,9 +17021,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 73 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/form.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/form.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17051,9 +17051,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 74 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/formItem.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/formItem.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17081,9 +17081,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 75 */
-/*!***********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/gap.js ***!
-  \***********************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/gap.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17108,9 +17108,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 76 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/grid.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/grid.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17133,9 +17133,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 77 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/gridItem.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/gridItem.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17157,9 +17157,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 78 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/icon.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/icon.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17201,9 +17201,9 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 45));f
 
 /***/ }),
 /* 79 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/image.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/image.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17239,9 +17239,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 80 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/indexAnchor.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/indexAnchor.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17266,9 +17266,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 81 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/indexList.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/indexList.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17293,9 +17293,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 82 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/input.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/input.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17349,9 +17349,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 83 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/keyboard.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/keyboard.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17387,9 +17387,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 84 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/line.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/line.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17415,9 +17415,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 85 */
-/*!********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/lineProgress.js ***!
-  \********************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/lineProgress.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17442,9 +17442,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 86 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/link.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/link.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17476,9 +17476,9 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 45));f
 
 /***/ }),
 /* 87 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/list.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/list.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17512,9 +17512,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 88 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/listItem.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/listItem.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17535,9 +17535,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 89 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/loadingIcon.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/loadingIcon.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17573,9 +17573,9 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 45));f
 
 /***/ }),
 /* 90 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/loadingPage.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/loadingPage.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17603,9 +17603,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 91 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/loadmore.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/loadmore.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17640,9 +17640,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 92 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/modal.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/modal.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17678,9 +17678,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 93 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/navbar.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/navbar.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17717,9 +17717,9 @@ var _color = _interopRequireDefault(__webpack_require__(/*! ../color */ 94));fun
 
 /***/ }),
 /* 94 */
-/*!*******************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/color.js ***!
-  \*******************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/color.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17744,9 +17744,9 @@ color;exports.default = _default;
 
 /***/ }),
 /* 95 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/noNetwork.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/noNetwork.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17769,9 +17769,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 96 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/noticeBar.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/noticeBar.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17804,9 +17804,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 97 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/notify.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/notify.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17834,9 +17834,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 98 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/numberBox.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/numberBox.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17877,9 +17877,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 99 */
-/*!**********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
-  \**********************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17902,9 +17902,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 100 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/overlay.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/overlay.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17928,9 +17928,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 101 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/parse.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/parse.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17958,9 +17958,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 102 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/picker.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/picker.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17996,9 +17996,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 103 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/popup.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/popup.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18033,9 +18033,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 104 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/radio.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/radio.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18068,9 +18068,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 105 */
-/*!******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/radioGroup.js ***!
-  \******************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/radioGroup.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18106,9 +18106,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 106 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/rate.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/rate.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18140,9 +18140,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 107 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/readMore.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/readMore.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18170,9 +18170,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 108 */
-/*!***********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/row.js ***!
-  \***********************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/row.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18195,9 +18195,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 109 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/rowNotice.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/rowNotice.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18224,9 +18224,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 110 */
-/*!******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/scrollList.js ***!
-  \******************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/scrollList.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18252,9 +18252,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 111 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/search.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/search.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18297,9 +18297,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 112 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/section.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/section.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18329,9 +18329,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 113 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/skeleton.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/skeleton.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18362,9 +18362,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 114 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/slider.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/slider.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18395,9 +18395,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 115 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/statusBar.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/statusBar.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18418,9 +18418,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 116 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/steps.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/steps.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18447,9 +18447,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 117 */
-/*!*****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/stepsItem.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/stepsItem.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18473,9 +18473,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 118 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/sticky.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/sticky.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18501,9 +18501,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 119 */
-/*!******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/subsection.js ***!
-  \******************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/subsection.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18532,9 +18532,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 120 */
-/*!*******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/swipeAction.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/swipeAction.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18555,9 +18555,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 121 */
-/*!***********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
-  \***********************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18584,9 +18584,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 122 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/swiper.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/swiper.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18630,9 +18630,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 123 */
-/*!************************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
-  \************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18657,9 +18657,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 124 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/switch.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/switch.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18689,9 +18689,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 125 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/tabbar.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/tabbar.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18719,9 +18719,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 126 */
-/*!******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/tabbarItem.js ***!
-  \******************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/tabbarItem.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18747,9 +18747,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 127 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/tabs.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/tabs.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18787,9 +18787,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 128 */
-/*!***********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/tag.js ***!
-  \***********************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/tag.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18824,9 +18824,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 129 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/text.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/text.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18869,9 +18869,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 130 */
-/*!****************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/textarea.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/textarea.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18913,9 +18913,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 131 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/toast.js ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/toast.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18950,9 +18950,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 132 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/toolbar.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/toolbar.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18978,9 +18978,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 133 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/tooltip.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/tooltip.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19011,9 +19011,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 134 */
-/*!******************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/transition.js ***!
-  \******************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/transition.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19037,9 +19037,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 135 */
-/*!**************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/props/upload.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/props/upload.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19081,9 +19081,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 136 */
-/*!********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/config/zIndex.js ***!
-  \********************************************************************************/
+/*!************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/config/zIndex.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19110,9 +19110,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 137 */
-/*!************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/function/platform.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/function/platform.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19195,9 +19195,77 @@ platform;exports.default = _default;
 
 /***/ }),
 /* 138 */
-/*!***************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/api/request.js ***!
-  \***************************************************/
+/*!************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/common/getwxinfo.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {// import {
+// 	myRequest
+// } from '@/config/api.js';
+
+// uni.login()封装
+var wxLogin = function wxLogin(openid) {
+  return new Promise(function (resolve, reject) {
+    uni.login({
+      success: function success(res) {
+        if (res.code) {
+          resolve(res.code);
+        } else {
+          reject(res.errMsg);
+        }
+      } });
+
+
+  });
+};
+/*微信小程序登录*/
+var getWxInfo = function getWxInfo() {
+  return new Promise(function (resolve, reject) {
+    uni.getUserProfile({
+      desc: '获取用户授权',
+      success: function success(res) {
+        var userInfo = res.userInfo;
+        wxLogin().then(function (code) {// 引用uni.login()封装
+          // wx.login获取code --ajax-- 存本地 store
+          resolve({ userInfo: userInfo, code: code });
+        });
+      } });
+
+  });
+};
+
+// 获取手机号授权
+var getPhoneNumber = function getPhoneNumber(event) {
+  var that = this;
+  // let code = event.detail.code; //获取手机code
+  var promise = new Promise(function (resolve, reject) {
+    // 检查登录状态是否过期
+    uni.checkSession({
+      success: function success(res) {
+        var phone = res.data;
+        resolve(phone);
+      },
+      fail: function fail(err) {
+        console.log('登录过期');
+      } });
+
+  });
+  return promise;
+};
+
+module.exports = {
+  getWxInfo: getWxInfo,
+  getPhoneNumber: getPhoneNumber,
+  wxLogin: wxLogin };
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 139 */
+/*!*******************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/api/request.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19254,16 +19322,16 @@ module.exports = function (vm) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 139 */,
 /* 140 */,
 /* 141 */,
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */
-/*!***********************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/api/api.js ***!
-  \***********************************************/
+/* 145 */,
+/* 146 */
+/*!***************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/api/api.js ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19278,7 +19346,6 @@ exports.postTest = postTest;var getTest = function getTest(data) {return http.ge
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 146 */,
 /* 147 */,
 /* 148 */,
 /* 149 */,
@@ -19297,10 +19364,11 @@ exports.postTest = postTest;var getTest = function getTest(data) {return http.ge
 /* 162 */,
 /* 163 */,
 /* 164 */,
-/* 165 */
-/*!*******************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/mixin/button.js ***!
-  \*******************************************************************************/
+/* 165 */,
+/* 166 */
+/*!***********************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/mixin/button.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19318,10 +19386,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     openType: String } };exports.default = _default;
 
 /***/ }),
-/* 166 */
-/*!*********************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/libs/mixin/openType.js ***!
-  \*********************************************************************************/
+/* 167 */
+/*!*************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/libs/mixin/openType.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19351,10 +19419,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     } } };exports.default = _default;
 
 /***/ }),
-/* 167 */
-/*!***************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/components/u-button/props.js ***!
-  \***************************************************************************************/
+/* 168 */
+/*!*******************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/components/u-button/props.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19520,17 +19588,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 168 */,
 /* 169 */,
 /* 170 */,
 /* 171 */,
 /* 172 */,
 /* 173 */,
 /* 174 */,
-/* 175 */
-/*!*********************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/components/u-loading-icon/props.js ***!
-  \*********************************************************************************************/
+/* 175 */,
+/* 176 */
+/*!*************************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/components/u-loading-icon/props.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19594,17 +19662,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 176 */,
 /* 177 */,
 /* 178 */,
 /* 179 */,
 /* 180 */,
 /* 181 */,
 /* 182 */,
-/* 183 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/components/u-icon/icons.js ***!
-  \*************************************************************************************/
+/* 183 */,
+/* 184 */
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/components/u-icon/icons.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19824,10 +19892,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   'uicon-en': "\uE692" };exports.default = _default;
 
 /***/ }),
-/* 184 */
-/*!*************************************************************************************!*\
-  !*** /Users/wyz/Downloads/uni/ywk/node_modules/uview-ui/components/u-icon/props.js ***!
-  \*************************************************************************************/
+/* 185 */
+/*!*****************************************************************************************************!*\
+  !*** /Users/wyz/Downloads/uni/ywk/uniapp-template/node_modules/uview-ui/components/u-icon/props.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

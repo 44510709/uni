@@ -5,21 +5,21 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
 	state:{
 		// userName:'未登录用户'
-		userName:uni.getStorageSync('userName')?uni.getStorageSync('userName'):'未登录用户'
+		userInfo:uni.getStorageSync('userInfo')?(JSON.parse(uni.getStorageSync('userInfo'))):{userName:'未登录用户'}
 	},
 	mutations:{
-		MLOGIN(state,userName){
-			uni.setStorageSync('userName',userName)
-			state.userName = userName
+		MLOGIN(state,userInfo){
+			uni.setStorageSync('userInfo',JSON.stringify(userInfo))
+			state.userInfo = userInfo
 		},
 		MLOGOUT(state){
-			uni.clearStorageSync('userName')
-			state.userName = '退出状态'
+			uni.clearStorageSync('userInfo')
+			state.userInfo = {"userName":"未登录用户"}
 		}
 	},
 	actions:{
-		login(context,userName){
-			context.commit('MLOGIN',userName)
+		login(context,userInfo){
+			context.commit('MLOGIN',userInfo)
 		},
 		logout(context){
 			context.commit('MLOGOUT')
