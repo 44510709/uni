@@ -3,8 +3,10 @@
 ## 目录结构
    - api 存放request封装 以及api接口管理 
    ```
-   request.js 使用uview ui uview官网api -> Http请求  [https://www.uviewui.com/js/http.html]
+   request.js 使用uview ui uview官网api -> Http请求  
+   详细看文档 [https://www.uviewui.com/js/http.html]
    ```
+  
    - components 存放组件 pages.json 配置easycom 按需自动加载 无需手动导入
    ```
    "easycom": {

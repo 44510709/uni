@@ -1,4 +1,7 @@
 //  uview api Http请求 https://www.uviewui.com/js/http.html
+
+const { log } = require("util");
+
 // 此vm参数为页面的实例，可以通过它引用vuex中的变量
 module.exports = (vm) => {
     // 初始化请求配置

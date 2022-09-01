@@ -27,7 +27,7 @@
 		mapState
 	} from 'vuex'
 	import {
-		getTest
+		getTest,
 	} from '@/api/api.js'
 	
 	export default {
@@ -40,9 +40,8 @@
 			...mapState(['userInfo'])
 		},
 		async onLoad() {
-			// let test = await getTest()
-			// console.log(test,11);
-		
+			// let test = await getTest({custom: { auth: false}})
+			// console.log(test,121);
 		},
 		methods: {
 			...mapActions(['login', 'logout']),
