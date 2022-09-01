@@ -34,8 +34,8 @@
 	"easycom": {
 	  "autoscan": true,
 	  "custom": {
-		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue" //按需加载
-		// "(.*)": "@/components/$1.vue" // 匹配components目录内的vue文件
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue", //按需加载
+		"^c-(.*)": "@/components/c-$1.vue" // 匹配components目录内的vue文件
 	  }
 	}
 }

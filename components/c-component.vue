@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		name:"new-component",
+		name:"c-component",
 		props:['msg'],
 		data() {
 			return {

@@ -4,7 +4,7 @@
 			<text class="title">{{title}}</text>
 		</view>
 		<navigator url="/subpages/fenbao/fenbao">分包</navigator>
-		<new-component :msg='title' @childEvent="sayhello"></new-component>
+		<c-component :msg='title' @childEvent="sayhello"></c-component>
 
 		<view class="">{{userInfo.userName}}11</view>
 		<button @click="login('gjx')">登录</button>
