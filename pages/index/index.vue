@@ -17,7 +17,6 @@
 			
 		},
 		async onLoad() {
-			navigator()
 		},
 		methods: {
 			

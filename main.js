@@ -8,12 +8,6 @@ App.mpType = 'app'
 //调用 store vuex状态管理 
 import store from '@/store/index.js'
 
-//运行环境判断
-if (process.env.NODE_ENV === 'development') {
-	console.log('开发环境');
-} else {
-	console.log('生产环境');
-}
 
 //引用uview ui 
 import uView from 'uview-ui'
@@ -28,7 +22,7 @@ const app = new Vue({
 	store
 })
 // 引入请求封装，将app参数传递到配置中
-require('@/api/request.js')(app)
+require('@/http/request.js')(app)
 app.$mount()
 // #endif
 

@@ -1,0 +1,20 @@
+{
+	"uni-app": {
+		"scripts": {
+			"weixin-dev": {
+				"title": "微信小程序:开发环境",
+				"env": {
+					"UNI_PLATFORM": "mp-weixin",
+					"name": "dev"
+				}
+			},
+			"weixin-prod": {
+				"title": "微信小程序:生产环境",
+				"env": {
+					"UNI_PLATFORM": "mp-weixin",
+					"name": "prod"
+				}
+			}
+		}
+	}
+}

@@ -28,7 +28,7 @@
 	} from 'vuex'
 	import {
 		getTest,
-	} from '@/api/api.js'
+	} from '@/api/home.js'
 	
 	export default {
 		data() {
@@ -40,7 +40,7 @@
 			...mapState(['userInfo'])
 		},
 		async onLoad() {
-			// let test = await getTest({custom: { auth: false}})
+			let test = await getTest({custom: { auth: false}})
 			// console.log(test,121);
 		},
 		methods: {
