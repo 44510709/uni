@@ -14,7 +14,7 @@ import uView from 'uview-ui'
 Vue.use(uView)
 
 //引用封装的授权js
-import wxInfo from '@/common/getwxinfo.js'
+import wxInfo from '@/common/getUserInfo.js'
 Vue.prototype.$wx = wxInfo
 
 const app = new Vue({
