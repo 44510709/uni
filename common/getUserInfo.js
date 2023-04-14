@@ -118,5 +118,5 @@ module.exports = {
 	getUserInfo,
 	getPhoneNumber,
 	toLogin,
-	loginPop
+	showLogin
 }
