@@ -17,6 +17,10 @@ Vue.use(uView)
 import wxInfo from '@/common/getUserInfo.js'
 Vue.prototype.$wx = wxInfo
 
+// 导入并挂载全局的分享方法
+import share from '@/common/share.js'
+Vue.mixin(share)
+
 const app = new Vue({
     ...App,
 	store
