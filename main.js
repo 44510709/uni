@@ -14,8 +14,8 @@ import uView from 'uview-ui'
 Vue.use(uView)
 
 //引用封装的授权js
-import wxInfo from '@/common/getUserInfo.js'
-Vue.prototype.$wx = wxInfo
+import getInfo from '@/common/getUserInfo.js'
+Vue.prototype.$info = getInfo
 
 // 导入并挂载全局的分享方法
 import share from '@/common/share.js'
