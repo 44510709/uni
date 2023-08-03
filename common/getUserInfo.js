@@ -1,4 +1,8 @@
-// import {} from '@/api/api.js'
+// import {
+// 	getOpenid,
+// 	getMobile,
+// 	getUser
+// } from '@/api/user.js'
 
 import store from '@/store/index.js'
 /**
@@ -30,17 +34,12 @@ const toLogin = function() {
  */
 const getUserInfo = function() {
 	return new Promise((resolve, reject) => {
-		tt.getUserProfile({
+		uni.getUserInfo({
 			success(res) {
 				console.log("getUserProfile 调用成功：", res.userInfo);
-				// let userInfo = res.userInfo;
-				// toLogin().then(code => { // 引用uni.login()封装
-				// 	// wx.login获取code --ajax-- 存本地 store
-				// 	resolve({
-				// 		userInfo,
-				// 		code
-				// 	})
-				// })
+				if (res.userInfo) {
+					store.dispatch('userInfo', JSON.stringify(res.userInfo))
+				}
 			},
 			fail(res) {
 				console.log("getUserProfile 调用失败", res);
@@ -64,13 +63,9 @@ const getPhoneNumber = function(event) {
 					iv: event.detail.iv,
 					encryptedData: event.detail.encryptedData,
 				})
-				let token = await login({
-					'mobile': mobile.phoneNumber,
-					'openid': openid
-				})
-				console.log(token, 1111);
-				store.dispatch('setmobile', mobile.phoneNumber)
-				store.dispatch('settoken', token)
+				console.log(mobile, 1111);
+				// store.dispatch('setmobile', mobile.phoneNumber)
+				// store.dispatch('settoken', token)
 				resolve(true);
 			},
 			fail(err) {
